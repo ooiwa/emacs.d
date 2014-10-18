@@ -28,6 +28,7 @@
 (depends-on "popwin")
 (depends-on "prodigy")
 (depends-on "projectile")
+(depends-on "rinari")
 (depends-on "robe")
 (depends-on "ruby-block")
 (depends-on "ruby-electric")
