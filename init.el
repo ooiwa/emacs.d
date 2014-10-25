@@ -1,3 +1,4 @@
+(setq debug-on-error t)
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 (require 'pallet)
