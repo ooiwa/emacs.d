@@ -13,7 +13,10 @@
 
 ;; smart-compile
 (require 'smart-compile)
-(define-key ruby-mode-map (kbd "C-c c") 'smart-compile)
+(add-hook 'ruby-mode-map-hook
+          '(lambda ()
+　　　　　　　　(define-key ruby-mode-map (kbd "C-c c") 'smart-compile)
+　　　　　　　))
 
 (require 'rinari)
 (setq ruby-deep-indent-paren-style nil)
