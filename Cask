@@ -38,6 +38,7 @@
 (depends-on "ruby-mode")
 (depends-on "ruby-refactor")
 (depends-on "s")
+(depends-on "smart-compile")
 (depends-on "smartparens")
 (depends-on "smex")
 (depends-on "use-package")

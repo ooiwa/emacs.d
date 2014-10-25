@@ -10,6 +10,10 @@
 ;; php-moden
 (add-to-list 'auto-mode-alist '("\\.inc\\'" . php-mode))
 
+;; smart-compile
+(require 'smart-compile)
+(define-key ruby-mode-map (kbd "C-c c") 'smart-compile)
+
 (require 'rinari)
 (setq ruby-deep-indent-paren-style nil)
 
