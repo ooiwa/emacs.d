@@ -48,6 +48,8 @@
 (setq require-final-newline t)
 ;; バッファの最後でnewlineで新規行を追加するのを禁止する
 (setq next-line-add-newlines nil)
+;; 画面異動をShift+矢印で
+(windmove-default-keybindings)
 
 ;; バックアップファイルを作らない
 (setq make-backup-files nil)
