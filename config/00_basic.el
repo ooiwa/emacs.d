@@ -1,3 +1,7 @@
+(require 'server)
+(unless (server-running-p)
+  (server-start))
+
 ;; 日本語設定
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8)
