@@ -51,3 +51,11 @@
     (when indent
       (indent-line-to indent)
       (when (> offset 0) (forward-char offset)))))
+
+
+;; OmniSharp mode
+
+(add-hook 'csharp-mode-hook 'omnisharp-mode)
+(setq omnisharp-server-executable-path "/usr/bin/curl")
+
+

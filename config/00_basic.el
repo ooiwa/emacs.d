@@ -30,6 +30,12 @@
 ;; see http://d.hatena.ne.jp/aoe-tk/20130210/1360506829
 (load-theme 'misterioso t)
 
+;; 透明度
+(defun set-alpha (alpha-num)
+  "set frame parameter 'alpha"
+  (interactive "nAlpha: ")
+  (set-frame-parameter nil 'alpha (cons alpha-num '(50))))
+
 ;; メニューバーを消す
 (menu-bar-mode -1)
 ;; ツールバーを消す
