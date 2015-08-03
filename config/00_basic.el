@@ -34,6 +34,12 @@
 
 (setq max-lisp-eval-depth 10000)
 
+;; 透明度
+(defun set-alpha (alpha-num)
+  "set frame parameter 'alpha"
+  (interactive "nAlpha: ")
+  (set-frame-parameter nil 'alpha (cons alpha-num '(50))))
+
 ;; メニューバーを消す
 (menu-bar-mode -1)
 ;; ツールバーを消す
