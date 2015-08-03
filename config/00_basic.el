@@ -17,11 +17,12 @@
 
 ;; Change Japanese font from Wawati SC (default)
 ;; see http://minus9d.hatenablog.com/entry/20131103/1383475472
-(set-face-attribute 'default nil
-		    :family "Menlo"
-		    :height 100) ;; font size 100 = 10pt
-(set-fontset-font nil 'japanese-jisx0208
-                  (font-spec :family "Hiragino Kaku Gothic ProN" :size 9.5))
+;; (set-face-attribute 'default nil
+;; 		    :family "Menlo"
+;; 		    :height 100) ;; font size 100 = 10pt
+ ;; (set-fontset-font nil 'japanese-jisx0208
+ ;;                  (font-spec :family "Hiragino Kaku Gothic ProN" :size 9.5))
+
 ;; 半角と全角の比を1:2にしたければ
 (setq face-font-rescale-alist
       '((".*Hiragino_Kaku_Gothic_ProN.*" . 1.2)));; Mac用フォント設定
@@ -29,6 +30,9 @@
 ;; Theme
 ;; see http://d.hatena.ne.jp/aoe-tk/20130210/1360506829
 (load-theme 'misterioso t)
+(set-frame-parameter (selected-frame) 'alpha '(85 50))
+
+(setq max-lisp-eval-depth 10000)
 
 ;; メニューバーを消す
 (menu-bar-mode -1)
@@ -54,11 +58,16 @@
 (setq next-line-add-newlines nil)
 ;; 画面異動をShift+矢印で
 (windmove-default-keybindings)
+;; 折り返す
+(global-set-key (kbd "C-c t") 'toggle-truncate-lines)
 
 ;; バックアップファイルを作らない
 (setq make-backup-files nil)
 ;; 終了時にオートセーブファイルを消す
 (setq delete-auto-save-files t)
+;; Avoid TRAMP error
+;; https://lists.gnu.org/archive/html/help-gnu-emacs/2005-10/msg00102.html
+(setq auto-save-file-name-transforms nil)
 
 ;;; デフォルトのタブ
 (setq-default indent-tabs-mode nil)
