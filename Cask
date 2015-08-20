@@ -25,6 +25,7 @@
 (depends-on "helm")
 (depends-on "helm-ag")
 (depends-on "helm-c-moccur")
+(depends-on "helm-ls-git")
 (depends-on "htmlize")
 (depends-on "idle-highlight-mode")
 (depends-on "init-loader")
