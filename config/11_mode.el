@@ -1,3 +1,9 @@
+;;; 11_mode.el -- xxx-mode
+
+;;; Commentary:
+
+;;; Code:
+
 ;; markdown mode
 (add-to-list 'auto-mode-alist '("\\.txt\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
@@ -8,8 +14,18 @@
 (add-to-list 'auto-mode-alist '("\\Gemfile\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake\\'" . ruby-mode))
 
-;; php-moden
+;; at 24.5, wrong? encoding-magic-comment
+;; (setq ruby-insert-encoding-magic-comment nil)
+(defvar ruby-insert-encoding-magic-comment nil)
+
+;; php-mode
 (add-to-list 'auto-mode-alist '("\\.inc\\'" . php-mode))
 
+;; ido-mode
+(ido-mode t)
 
-(setq ruby-insert-encoding-magic-comment nil)
+;; smart-parens
+(require 'smartparens-config)
+(smartparens-global-mode t)
+
+;;; 11_mode.el ends here

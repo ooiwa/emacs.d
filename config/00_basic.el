@@ -1,3 +1,9 @@
+;;; 00_basic.el --- basic settings
+
+;;; Commentary:
+
+;;; Code:
+
 (require 'server)
 (unless (server-running-p)
   (server-start))
@@ -38,7 +44,9 @@
 (defun set-alpha (alpha-num)
   "set frame parameter 'alpha"
   (interactive "nAlpha: ")
-  (set-frame-parameter nil 'alpha (cons alpha-num '(50))))
+  (set-frame-parameter nil 'alpha (cons alpha-num '(80))))
+(set-alpha 80)
+
 
 ;; メニューバーを消す
 (menu-bar-mode -1)
@@ -95,6 +103,8 @@
 (global-auto-revert-mode 1)
 
 
+(set-frame-position (selected-frame) 0 0)
+(set-frame-size (selected-frame) 189 51)
 ;; Undo tree
 ;; (global-undo-tree-mode)
 
@@ -128,3 +138,6 @@
 
 
 (read-scratch-data)
+
+
+;;; 00_basic.el ends here
