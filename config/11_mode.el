@@ -21,11 +21,4 @@
 ;; php-mode
 (add-to-list 'auto-mode-alist '("\\.inc\\'" . php-mode))
 
-;; ido-mode
-(ido-mode t)
-
-;; smart-parens
-(require 'smartparens-config)
-(smartparens-global-mode t)
-
 ;;; 11_mode.el ends here

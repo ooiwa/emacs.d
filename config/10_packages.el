@@ -2,6 +2,10 @@
 
 ;;; Commentary:
 
+;; at ido-mode, C-j can
+;; - create new file
+;; - enter dired
+
 ;;; Code:
 
 (require 'dired-x)
@@ -15,5 +19,12 @@
 
 ;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; ido-mode
+(ido-mode t)
+
+;; smart-parens
+(require 'smartparens-config)
+(smartparens-global-mode t)
 
 ;;; 10_packages.el ends here
