@@ -29,6 +29,6 @@
 
 (add-to-list 'exec-path "/usr/local/bin")
 
-(setq debug-on-error t)
+(setq debug-on-error nil)
 
 ;;; init.el ends here

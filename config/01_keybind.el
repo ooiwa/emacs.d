@@ -32,4 +32,14 @@
 						  (cdr url-region))))))
 (global-set-key "\C-c\C-o" 'browse-url-at-point)
 
+
+;; ウィンドウが１つのときは自動で１個作り
+;; 複数あったらウィンドウ切り替えを行う
+(defun other-window-or-split ()
+  (interactive)
+  (when (one-window-p)
+    (split-window-horizontally))
+  (other-window 1))
+
+(global-set-key (kbd "C-t") 'other-window-or-split)
 ;;; 01_keybind.el ends here

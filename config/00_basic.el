@@ -9,7 +9,7 @@
   (server-start))
 
 ;; 日本語設定
-(set-language-environment 'Japanese)
+(set-language-environment 'utf-8)
 (prefer-coding-system 'utf-8)
 (set-buffer-file-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -34,15 +34,14 @@
       '((".*Hiragino_Kaku_Gothic_ProN.*" . 1.2)));; Mac用フォント設定
 
 ;; Theme
-;; see http://d.hatena.ne.jp/aoe-tk/20130210/1360506829
-(load-theme 'misterioso t)
-(set-frame-parameter (selected-frame) 'alpha '(85 50))
+;; see http://d.hatena.ne.jp/aoe-tk/20130210/1360506829w
+(require 'bliss-theme)
 
 (setq max-lisp-eval-depth 10000)
 
 ;; 透明度
 (defun set-alpha (alpha-num)
-  "set frame parameter 'alpha"
+  "Set ALPHA-NUM frame parameteralpha."
   (interactive "nAlpha: ")
   (set-frame-parameter nil 'alpha (cons alpha-num '(80))))
 (set-alpha 80)
@@ -60,10 +59,18 @@
 (show-paren-mode 1)
 ;; ウィンドウ内に収まらないときだけカッコ内も光らせる
 (setq show-paren-style 'mixed)
-;; 行末の空白を表示　
-(setq-default show-trailing-whitespace t)
-;; 現在行を目立たせる　
-(global-hl-line-mode)
+
+;; 現在行を目立たせる
+;; (global-hl-line-mode)
+(require 'hl-line)
+(defun global-hl-line-timer-function ()
+  (global-hl-line-unhighlight-all)
+  (let ((global-hl-line-mode t))
+    (global-hl-line-highlight)))
+(setq global-hl-line-timer
+      (run-with-idle-timer 0.03 t 'global-hl-line-timer-function))
+
+
 ;; 行の先頭をC-kを一回押すだけで行全体を表示する
 (setq kill-whole-line t)
 ;; 最終行に必ず一行挿入する
@@ -102,7 +109,7 @@
 ;; 変更されたら開き直す
 (global-auto-revert-mode 1)
 
-
+;; 最大化する
 (set-frame-position (selected-frame) 0 0)
 (set-frame-size (selected-frame) 189 51)
 ;; Undo tree
