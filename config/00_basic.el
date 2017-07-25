@@ -24,10 +24,10 @@
 ;; Change Japanese font from Wawati SC (default)
 ;; see http://minus9d.hatenablog.com/entry/20131103/1383475472
 ;; (set-face-attribute 'default nil
-;; 		    :family "Menlo"
-;; 		    :height 100) ;; font size 100 = 10pt
- ;; (set-fontset-font nil 'japanese-jisx0208
- ;;                  (font-spec :family "Hiragino Kaku Gothic ProN" :size 9.5))
+;;     :family "Menlo"
+;;     :height 100) ;; font size 100 = 10pt
+;; (set-fontset-font nil 'japanese-jisx0208
+;;                  (font-spec :family "Hiragino Kaku Gothic ProN" :size 9.5))
 
 ;; 半角と全角の比を1:2にしたければ
 (setq face-font-rescale-alist
