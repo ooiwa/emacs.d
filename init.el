@@ -32,7 +32,7 @@
 (require 'init-loader)
 (setq init-loader-show-log-after-init 'error-only)
 (init-loader-load (expand-file-name "~/.emacs.d/config"))
-(init-loader-load (expand-file-name "~/.emacs.d/vendor"))
+;; (init-loader-load (expand-file-name "~/.emacs.d/vendor"))
 
 (add-to-list 'exec-path "/usr/local/bin")
 

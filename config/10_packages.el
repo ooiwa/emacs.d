@@ -36,7 +36,7 @@
 (global-set-key (kbd "C-c t") 'multi-term)
 (global-set-key (kbd "C-c n") 'multi-term-next)
 (global-set-key (kbd "C-c p") 'multi-term-prev)
-(multi-term)
+;;  (multi-term)
 (add-hook 'term-mode-hook
           (lambda ()
             (define-key term-raw-map (kbd "C-\\") 'other-window)
