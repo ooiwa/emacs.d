@@ -22,6 +22,9 @@
 ;; 前の画面に移動
 (define-key global-map (kbd "\C-xp") (lambda () (interactive) (other-window -1)))
 
+;; Ctrl-x 1 の無効化
+(global-unset-key "\C-x1")
+
 ;; Open URL at the point
 (defun browse-url-at-point ()
   "Open url at the point on the default browser."

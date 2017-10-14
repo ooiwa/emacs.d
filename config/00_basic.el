@@ -44,7 +44,7 @@
   "Set ALPHA-NUM frame parameteralpha."
   (interactive "nAlpha: ")
   (set-frame-parameter nil 'alpha (cons alpha-num '(80))))
-(set-alpha 85)
+(set-alpha 90)
 
 
 ;; メニューバーを消す
