@@ -11,6 +11,7 @@
 (depends-on "bind-key")
 (depends-on "bliss-theme")
 (depends-on "cask")
+(depends-on "clang-format")
 (depends-on "cmake-mode")
 (depends-on "coffee-mode")
 (depends-on "color-moccur")

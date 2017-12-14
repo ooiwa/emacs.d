@@ -47,7 +47,7 @@
  '(irony-additional-clang-options (quote ("-std=c++14")))
  '(package-selected-packages
    (quote
-    (flycheck-irony company irony cmake-mode dockerfile-mode yasnippet yaml-mode web-mode use-package smex smart-compile scss-mode ruby-refactor ruby-end ruby-electric ruby-block robe rinari python-mode projectile prodigy popwin php-mode pallet omnisharp nyan-mode multiple-cursors multi-term markdown-mode+ magit json-mode js2-mode init-loader image+ idle-highlight-mode htmlize helm-ls-git helm-c-moccur helm-ag haml-mode git-gutter git-gutter+ geeknote flycheck-pyflakes flycheck-cask expand-region exec-path-from-shell evil-smartparens evernote-mode drag-stuff coffee-mode bliss-theme auto-install apache-mode all-ext 0blayout))))
+    (clang-format flycheck-irony company irony cmake-mode dockerfile-mode yasnippet yaml-mode web-mode use-package smex smart-compile scss-mode ruby-refactor ruby-end ruby-electric ruby-block robe rinari python-mode projectile prodigy popwin php-mode pallet omnisharp nyan-mode multiple-cursors multi-term markdown-mode+ magit json-mode js2-mode init-loader image+ idle-highlight-mode htmlize helm-ls-git helm-c-moccur helm-ag haml-mode git-gutter git-gutter+ geeknote flycheck-pyflakes flycheck-cask expand-region exec-path-from-shell evil-smartparens evernote-mode drag-stuff coffee-mode bliss-theme auto-install apache-mode all-ext 0blayout))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
