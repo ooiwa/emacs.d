@@ -22,10 +22,10 @@
 ;; 前の画面に移動
 (define-key global-map (kbd "\C-xp") (lambda () (interactive) (other-window -1)))
 ;; 突然ウィンドウがなくなるの回避
-(global-unset-key "\C-[")
-
+(global-unset-key "\C-[\C-[\C-[")
 ;; Ctrl-x 1 の無効化
 (global-unset-key "\C-x1")
+
 
 ;; Open URL at the point
 (defun browse-url-at-point ()
