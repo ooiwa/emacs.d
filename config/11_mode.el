@@ -63,10 +63,10 @@
        (flycheck-irony-setup))))
 
 (require 'clang-format)
-(global-set-key (kbd "C-c i") 'clang-format-region)
+(setq clang-format-style-option "google")
+;; (global-set-key (kbd "C-c i") 'clang-format-region)
 (global-set-key (kbd "C-c u") 'clang-format-buffer)
 
-(setq clang-format-style-option "google")
 
 ;; python
 ;; (add-hook 'python-mode-hook
